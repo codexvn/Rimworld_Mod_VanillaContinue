@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>原版-continue</name>
+  <author>codexvn</author>
+  <!-- 沿用原 mod（会发电的逆重引擎，作者 xiao_yan）的 packageId：请先停用或取消订阅原 mod，两者不能同时启用 -->
+  <packageId>xiaoyan.PowerGeneratingGravEngine</packageId>
+  <description>
+    基于「会发电的逆重引擎」（xiao_yan）重做的个人版本，原 mod 的预览图与 packageId 保持不变。
+
+    功能：逆重引擎获得基础发电量，并可通过填入燃料提升发电量（每单位燃料增加可配置的瓦数，上限可配置）。
+
+    相对原版的改进：
+    - 自动加注修复：原 mod 沿用默认的 30% 加注阈值，燃料条停在三分之一处不再上涨；
+      本版按飞船燃料罐的原版做法将阈值设为 100%，殖民者会持续加到目标量
+    - 燃料改为逆重板（GravlitePanel），存量引擎中的玻璃钢可手动弹出
+    - 支持设置目标燃料量（引擎上的「设置目标燃料量」按钮）
+    - 上限修改即时生效，无需重启游戏（原版需保存后重启）
+
+    需要 Odyssey DLC。
+  </description>
+  <supportedVersions>
+    <li>1.7</li>
+  </supportedVersions>
+</ModMetaData>
