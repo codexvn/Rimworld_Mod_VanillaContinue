@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <VanillaContinue.SettingsCategory>原版-continue（会发电的逆重引擎）</VanillaContinue.SettingsCategory>
+  <VanillaContinue.BasePower>基础发电量: {0} W</VanillaContinue.BasePower>
+  <VanillaContinue.PowerPerFuelUnit>每单位燃料发电量: {0} W</VanillaContinue.PowerPerFuelUnit>
+  <VanillaContinue.MaxFuelCapacity>燃料上限: {0}</VanillaContinue.MaxFuelCapacity>
+  <VanillaContinue.MaxFuelCapacityNote>修改即时生效，无需重启游戏。</VanillaContinue.MaxFuelCapacityNote>
+  <VanillaContinue.FuelType>燃料类型（点击切换）: {0}</VanillaContinue.FuelType>
+  <VanillaContinue.FuelTypeNote>切换即时生效；引擎中已装填的另一种燃料保留，可用「弹出燃料」取出。</VanillaContinue.FuelTypeNote>
+  <VanillaContinue.FuelPlasteel>玻璃钢</VanillaContinue.FuelPlasteel>
+  <VanillaContinue.FuelGravlite>逆重板</VanillaContinue.FuelGravlite>
+  <VanillaContinue.ResetDefaults>恢复默认值</VanillaContinue.ResetDefaults>
+</LanguageData>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <VanillaContinue.SettingsCategory>Vanilla-continue (Power-generating grav engine)</VanillaContinue.SettingsCategory>
+  <VanillaContinue.BasePower>Base power output: {0} W</VanillaContinue.BasePower>
+  <VanillaContinue.PowerPerFuelUnit>Power per fuel unit: {0} W</VanillaContinue.PowerPerFuelUnit>
+  <VanillaContinue.MaxFuelCapacity>Fuel capacity: {0}</VanillaContinue.MaxFuelCapacity>
+  <VanillaContinue.MaxFuelCapacityNote>Takes effect immediately; no restart needed.</VanillaContinue.MaxFuelCapacityNote>
+  <VanillaContinue.FuelType>Fuel type (click to switch): {0}</VanillaContinue.FuelType>
+  <VanillaContinue.FuelTypeNote>Switching takes effect immediately; fuel of the other type already inside is kept and can be ejected.</VanillaContinue.FuelTypeNote>
+  <VanillaContinue.FuelPlasteel>Plasteel</VanillaContinue.FuelPlasteel>
+  <VanillaContinue.FuelGravlite>Gravlite panel</VanillaContinue.FuelGravlite>
+  <VanillaContinue.ResetDefaults>Reset to defaults</VanillaContinue.ResetDefaults>
+</LanguageData>

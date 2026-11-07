@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
 
-  <!-- 给逆重引擎挂燃料组件：燃料为逆重板，自动加注阈值 100%（原版飞船燃料罐的做法，
-       修复原 mod 沿用 30% 阈值导致燃料条停在三分之一处的问题），支持设置目标燃料量 -->
+  <!-- 给逆重引擎挂燃料组件：燃料默认玻璃钢（可在 Mod 设置切换为逆重板），自动加注阈值 100%
+       （原版飞船燃料罐的做法，修复原 mod 沿用 30% 阈值导致燃料条停在三分之一处的问题），支持设置目标燃料量 -->
   <Operation Class="PatchOperationAdd">
     <xpath>Defs/ThingDef[defName='GravEngine']/comps[not(li[@Class='CompProperties_Refuelable'])]</xpath>
     <value>
@@ -14,11 +14,11 @@
         <autoRefuelPercent>1</autoRefuelPercent>
         <fuelFilter>
           <thingDefs>
-            <li>GravlitePanel</li>
+            <li>Plasteel</li>
           </thingDefs>
         </fuelFilter>
-        <fuelLabel>逆重板</fuelLabel>
-        <fuelGizmoLabel>逆重板</fuelGizmoLabel>
+        <fuelLabel>玻璃钢</fuelLabel>
+        <fuelGizmoLabel>玻璃钢</fuelGizmoLabel>
         <showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
         <canEjectFuel>true</canEjectFuel>
       </li>

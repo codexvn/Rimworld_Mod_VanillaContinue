@@ -28,9 +28,11 @@
     <ItemGroup>
       <MetaFiles Include="$(MSBuildProjectDirectory)\About\**\*" />
       <PatchFiles Include="$(MSBuildProjectDirectory)\Patches\**\*" />
+      <LangFiles Include="$(MSBuildProjectDirectory)\Languages\**\*" />
     </ItemGroup>
     <Copy SourceFiles="@(MetaFiles)" DestinationFolder="$(OutputPath)..\..\About\%(RecursiveDir)" />
     <Copy SourceFiles="@(PatchFiles)" DestinationFolder="$(OutputPath)..\..\Patches\%(RecursiveDir)" />
+    <Copy SourceFiles="@(LangFiles)" DestinationFolder="$(OutputPath)..\..\Languages\%(RecursiveDir)" />
     <Copy SourceFiles="$(MSBuildProjectDirectory)\Preview.png" DestinationFolder="$(OutputPath)..\..\" Condition="Exists('$(MSBuildProjectDirectory)\Preview.png')" />
     <Delete Files="$(OutputPath)$(AssemblyName).pdb" ContinueOnError="true" />
   </Target>
