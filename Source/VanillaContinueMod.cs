@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using RimWorld;
 using UnityEngine;
 using Verse;
@@ -6,8 +5,8 @@ using Verse;
 namespace VanillaContinue
 {
     /// <summary>
-    /// 设置与入口：基础发电量、每单位燃料发电量、燃料上限与燃料类型全部即时生效
-    /// （上限与燃料类型通过运行时改写 Def 实现，无需重启游戏）。
+    /// 设置与入口：基础发电量、每单位燃料发电量与燃料上限全部即时生效
+    /// （上限通过运行时改写 Def 实现，无需重启游戏）。燃料固定为玻璃钢，与原 mod 一致。
     /// </summary>
     public class VanillaContinueMod : Mod
     {
@@ -42,26 +41,15 @@ namespace VanillaContinue
             if (!Mathf.Approximately(newCap, Settings.MaxFuelCapacity))
             {
                 Settings.MaxFuelCapacity = Mathf.Round(newCap);
-                GravEnginePatcher.ApplyFuelSettings(Settings);
+                GravEnginePatcher.ApplyFuelCapacity(Settings.MaxFuelCapacity);
             }
-
-            if (listing.ButtonText("VanillaContinue.FuelType".Translate(
-                    Settings.UseGravlite
-                        ? "VanillaContinue.FuelGravlite".Translate()
-                        : "VanillaContinue.FuelPlasteel".Translate())))
-            {
-                Settings.UseGravlite = !Settings.UseGravlite;
-                GravEnginePatcher.ApplyFuelSettings(Settings);
-            }
-            listing.Label("VanillaContinue.FuelTypeNote".Translate());
 
             if (listing.ButtonText("VanillaContinue.ResetDefaults".Translate()))
             {
                 Settings.BasePower = 1000f;
                 Settings.PowerPerFuelUnit = 20f;
                 Settings.MaxFuelCapacity = 10000f;
-                Settings.UseGravlite = false;
-                GravEnginePatcher.ApplyFuelSettings(Settings);
+                GravEnginePatcher.ApplyFuelCapacity(Settings.MaxFuelCapacity);
             }
 
             listing.End();
@@ -74,29 +62,25 @@ namespace VanillaContinue
         public float PowerPerFuelUnit = 20f;
         public float MaxFuelCapacity = 10000f;
 
-        /// <summary>燃料类型：false=玻璃钢（默认），true=逆重板。</summary>
-        public bool UseGravlite = false;
-
         public override void ExposeData()
         {
             base.ExposeData();
             Scribe_Values.Look(ref BasePower, "basePower", 1000f);
             Scribe_Values.Look(ref PowerPerFuelUnit, "powerPerFuelUnit", 20f);
             Scribe_Values.Look(ref MaxFuelCapacity, "maxFuelCapacity", 10000f);
-            Scribe_Values.Look(ref UseGravlite, "useGravlite", false);
         }
     }
 
-    /// <summary>启动与设置变更时，把燃料上限与燃料类型写入逆重引擎的燃料组件定义。</summary>
+    /// <summary>启动与设置变更时，把燃料上限写入逆重引擎的燃料组件定义。</summary>
     [StaticConstructorOnStartup]
     public static class GravEnginePatcher
     {
         static GravEnginePatcher()
         {
-            ApplyFuelSettings(VanillaContinueMod.Instance?.Settings);
+            ApplyFuelCapacity(VanillaContinueMod.Instance?.Settings?.MaxFuelCapacity ?? 10000f);
         }
 
-        public static void ApplyFuelSettings(VanillaContinueSettings settings)
+        public static void ApplyFuelCapacity(float capacity)
         {
             var def = DefDatabase<ThingDef>.GetNamedSilentFail("GravEngine");
             var refuelable = def?.comps?.Find(c => c is CompProperties_Refuelable) as CompProperties_Refuelable;
@@ -104,17 +88,8 @@ namespace VanillaContinue
             {
                 return;
             }
-
-            refuelable.fuelCapacity = settings?.MaxFuelCapacity ?? 10000f;
-            refuelable.initialConfigurableTargetFuelLevel = refuelable.fuelCapacity;
-
-            string fuelDefName = settings?.UseGravlite == true ? "GravlitePanel" : "Plasteel";
-            var filter = new ThingFilter();
-            filter.SetAllow(DefDatabase<ThingDef>.GetNamed(fuelDefName), true);
-            refuelable.fuelFilter = filter;
-            string fuelLabel = ("VanillaContinue.Fuel" + (settings?.UseGravlite == true ? "Gravlite" : "Plasteel")).Translate();
-            refuelable.fuelLabel = fuelLabel;
-            refuelable.fuelGizmoLabel = fuelLabel;
+            refuelable.fuelCapacity = capacity;
+            refuelable.initialConfigurableTargetFuelLevel = capacity;
         }
     }
 }
