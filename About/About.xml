@@ -17,6 +17,8 @@
     - 上限修改即时生效，无需重启游戏（原版需保存后重启）
 
     需要 Odyssey DLC。
+
+    源码: https://github.com/codexvn/Rimworld_Mod_VanillaContinue
   </description>
   <supportedVersions>
     <li>1.7</li>
