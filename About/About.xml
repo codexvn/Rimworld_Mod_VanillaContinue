@@ -2,10 +2,10 @@
 <ModMetaData>
   <name>会发电的逆重引擎-continue</name>
   <author>codexvn</author>
-  <!-- 原作者 xiao_yan；packageId 在原 ID 后追加 .continue 后缀，与原 mod 可共存但功能重叠，请勿同时启用 -->
-  <packageId>xiaoyan.PowerGeneratingGravEngine.continue</packageId>
+  <!-- 沿用原作者 xiao_yan 的 packageId（不加后缀）：与工坊原 mod 同 ID，两者不能同时启用 -->
+  <packageId>xiaoyan.PowerGeneratingGravEngine</packageId>
   <description>
-    基于「会发电的逆重引擎」（xiao_yan）重做的个人版本，原 mod 的预览图与 packageId 保持不变。
+    「会发电的逆重引擎」（作者 xiao_yan）的继续维护版本，沿用原 mod 的预览图与 packageId；与工坊原版同 ID，启用本 mod 前请先停用原版。
 
     功能：逆重引擎获得基础发电量，并可通过填入燃料提升发电量（每单位燃料增加可配置的瓦数，上限可配置）。
 
