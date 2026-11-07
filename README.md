@@ -1,6 +1,6 @@
-# 原版-continue（会发电的逆重引擎·重制版）
+# 会发电的逆重引擎-continue
 
-基于创意工坊 mod「会发电的逆重引擎」（作者 xiao_yan，[工坊页面](https://steamcommunity.com/sharedfiles/filedetails/?id=3530387840)）重做的个人版本。原 mod 的预览图与 packageId 保持不变；**与原 mod 同 ID，启用本 mod 前请先取消订阅或停用原 mod**。
+基于创意工坊 mod「会发电的逆重引擎」（作者 xiao_yan，[工坊页面](https://steamcommunity.com/sharedfiles/filedetails/?id=3530387840)）重做的个人版本。沿用原 mod 的预览图，packageId 在原 ID 后追加 .continue 后缀；两者可共存但功能重叠，请勿同时启用。
 
 ## 功能
 

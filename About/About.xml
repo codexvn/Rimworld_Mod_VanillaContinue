@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
-  <name>原版-continue</name>
+  <name>会发电的逆重引擎-continue</name>
   <author>codexvn</author>
-  <!-- 沿用原 mod（会发电的逆重引擎，作者 xiao_yan）的 packageId：请先停用或取消订阅原 mod，两者不能同时启用 -->
-  <packageId>xiaoyan.PowerGeneratingGravEngine</packageId>
+  <!-- 原作者 xiao_yan；packageId 在原 ID 后追加 .continue 后缀，与原 mod 可共存但功能重叠，请勿同时启用 -->
+  <packageId>xiaoyan.PowerGeneratingGravEngine.continue</packageId>
   <description>
     基于「会发电的逆重引擎」（xiao_yan）重做的个人版本，原 mod 的预览图与 packageId 保持不变。
 

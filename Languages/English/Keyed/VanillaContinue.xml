@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
-  <VanillaContinue.SettingsCategory>Vanilla-continue (Power-generating grav engine)</VanillaContinue.SettingsCategory>
+  <VanillaContinue.SettingsCategory>Power-generating grav engine continue</VanillaContinue.SettingsCategory>
   <VanillaContinue.BasePower>Base power output: {0} W</VanillaContinue.BasePower>
   <VanillaContinue.PowerPerFuelUnit>Power per fuel unit: {0} W</VanillaContinue.PowerPerFuelUnit>
   <VanillaContinue.MaxFuelCapacity>Fuel capacity: {0}</VanillaContinue.MaxFuelCapacity>

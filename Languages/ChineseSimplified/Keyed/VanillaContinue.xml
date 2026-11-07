@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
-  <VanillaContinue.SettingsCategory>原版-continue（会发电的逆重引擎）</VanillaContinue.SettingsCategory>
+  <VanillaContinue.SettingsCategory>会发电的逆重引擎-continue</VanillaContinue.SettingsCategory>
   <VanillaContinue.BasePower>基础发电量: {0} W</VanillaContinue.BasePower>
   <VanillaContinue.PowerPerFuelUnit>每单位燃料发电量: {0} W</VanillaContinue.PowerPerFuelUnit>
   <VanillaContinue.MaxFuelCapacity>燃料上限: {0}</VanillaContinue.MaxFuelCapacity>
